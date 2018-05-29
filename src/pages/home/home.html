@@ -1,14 +1,15 @@
+<link rel "stylesheet" href "home.scss">
+
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      App Name
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button clear (click)="navigateToLogin()"> Login </button>
+  <br>
+  <button ion-button clear (click)="navigateToRegistration()">Register</button>
 </ion-content>

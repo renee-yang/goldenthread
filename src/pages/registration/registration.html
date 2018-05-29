@@ -1,0 +1,33 @@
+<link rel "stylesheet" href "registration.scss">
+
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Register
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item padding>
+            <ion-label floating>First Name</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item padding>
+            <ion-label floating>Last Name</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item padding>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="email"></ion-input>
+        </ion-item>
+        <ion-item padding>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+        <div padding>
+            <button ion-button clear (click)="navigateToProfile()">Register</button>
+        </div>
+    </ion-list>
+</ion-content>
