@@ -7,7 +7,8 @@
 </ion-header>
 
 
-<ion-content padding style="background-color:rgb(157, 167, 177)">
+<ion-content padding style="background-color:white">
+  <ion-searchbar (ionInput)="getCharities($event)"></ion-searchbar>
   <ion-list>
     <button ion-item *ngFor="let charity of this.charities" 
     (click)="charitySelected(charity)">
