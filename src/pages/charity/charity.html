@@ -1,12 +1,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Charity Name</ion-title>
+    <ion-title> {{name}} </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  
+<ion-content padding style="background-color:rgb(157, 167, 177); 
+font-family:'sans-serif'">
+  <p style= "text-align: center"> {{description}} </p>
+  <p style= "text-align: center"> Donation Goal: {{goalAmt}} </p>
+  <p style= "text-align: center"> Amount Raised: {{amtRaised}} </p>
 </ion-content>
+

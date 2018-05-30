@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CharityPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
  
 @IonicPage()
 @Component({
@@ -16,13 +9,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CharityPage {
 
   public name: string;
+  public description: string;
+  public amtRaised: number;
+  public goalAmt: number;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.name = this.navParams.get("name");
+    this.description = this.navParams.get("description");
+    this.amtRaised = this.navParams.get("amtRaised");
+    this.goalAmt = this.navParams.get("goalAmt");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CharityPage');
   }
 
-  
+
 }

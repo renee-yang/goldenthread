@@ -7,11 +7,11 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style="background-color:rgb(157, 167, 177)">
   <ion-list>
     <button ion-item *ngFor="let charity of this.charities" 
     (click)="charitySelected(charity)">
-      {{charity}}
+      {{charity.name}}
     </button>
   </ion-list>
 </ion-content>

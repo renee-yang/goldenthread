@@ -27,7 +27,4 @@ export class HomePage {
     this.navCtrl.push(CharitylistingPage);
   }
 
-  navigateToCharity() {
-    this.navCtrl.push(CharityPage);
-  }
 }

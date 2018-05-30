@@ -13,9 +13,8 @@ export class CharitylistingPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.charities = [
-      'red cross',
-      'peta',
-      'miracle for smiles'
+      {name: 'Red Cross', description: 'Details...', amtRaised: '125', goalAmt: '500'},
+      {name: 'Ipourlife', description: 'Details...', amtRaised: '30', goalAmt: '150'}
     ];
   }
 
@@ -23,12 +22,13 @@ export class CharitylistingPage {
     console.log('ionViewDidLoad CharitylistingPage');
   }
 
-  navigateToCharityProject() {
-    this.navCtrl.push(CharityPage);
-  }
-
-  charitySelected(charity) {
-    this.navCtrl.push(CharityPage, {});
+  charitySelected(charity: any) {
+    this.navCtrl.push(CharityPage, {
+      name: charity.name,
+      description: charity.description,
+      amtRaised: charity.amtRaised,
+      goalAmt: charity.goalAmt
+    });
   };
 
 }
