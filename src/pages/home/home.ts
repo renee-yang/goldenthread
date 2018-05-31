@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegistrationPage } from '../registration/registration';
 import { CharitylistingPage } from '../charitylist/charitylist';
+import { PortfolioPage } from '../portfolio/portfolio';
+import { PaymentPage } from '../payment/payment';
 
 @Component({
   selector: 'page-home',
@@ -12,7 +14,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
-  }
+  } 
 
   navigateToLogin() {
     this.navCtrl.push(LoginPage);
@@ -26,4 +28,11 @@ export class HomePage {
     this.navCtrl.push(CharitylistingPage);
   }
 
+  navigateToPortfolio() {
+    this.navCtrl.push(PortfolioPage);
+  }
+
+  navigateToPayment() {
+    this.navCtrl.push(PaymentPage);
+  }
 }
