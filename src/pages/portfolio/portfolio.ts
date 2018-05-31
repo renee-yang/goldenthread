@@ -18,7 +18,7 @@ export class PortfolioPage {
     user1.lastname = "Yang";
     user1.profilepicture = "https://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg";
     user1.location = "Maryland";
-    user1.charities = [, 'y'];
+    //user1.charities = ['x', 'y'];
 
   }
 
