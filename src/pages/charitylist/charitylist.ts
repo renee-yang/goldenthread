@@ -1,21 +1,33 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { CharityPage } from '../charity/charity';
+import { CharityPage } from '../charityprofile/charityprofile';
+import { Charity } from '../../models/charity';
 
 @IonicPage()
 @Component({
-  selector: 'page-charitylisting',
-  templateUrl: 'charitylisting.html',
+  selector: 'page-charitylist',
+  templateUrl: 'charitylist.html',
 })
 export class CharitylistingPage {
 
-  charities: any;
+  public charities: Array<Charity> = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.charities = [
-      { name: 'Red Cross', description: 'Details...', amtRaised: '125', goalAmt: '500' },
-      { name: 'Ipourlife', description: 'Details...', amtRaised: '30', goalAmt: '150' }
-    ];
+      var charity1 = new Charity();
+      charity1.name = "Red Cross";
+      charity1.description = "Details...";
+      charity1.amtRaised = 125;
+      charity1.goalAmt = 500;
+
+      var charity2 = new Charity();
+      charity2.name = "Ipourlife";
+      charity2.description = "Details...";
+      charity2.amtRaised = 30;
+      charity2.goalAmt = 150;
+      
+      this.charities.push(charity1);
+      this.charities.push(charity2);
+    
   }
 
   ionViewDidLoad() {
@@ -24,11 +36,7 @@ export class CharitylistingPage {
 
   charitySelected(charity: any) {
     this.navCtrl.push(CharityPage, {
-      name: charity.name,
-      description: charity.description,
-      amtRaised: charity.amtRaised,
-      goalAmt: charity.goalAmt,
-      // website: charity.website
+      charity: charity
     });
   }
 

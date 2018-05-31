@@ -9,8 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegistrationPage } from '../pages/registration/registration';
 import { ProfilePage } from '../pages/profile/profile';
-import { CharityPage } from '../pages/charity/charity';
-import { CharitylistingPage } from '../pages/charitylisting/charitylisting';
+import { CharityPage } from '../pages/charityprofile/charityprofile';
+import { CharitylistingPage } from '../pages/charitylist/charitylist';
 
 @NgModule({
   declarations: [

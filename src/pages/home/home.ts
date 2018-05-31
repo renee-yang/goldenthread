@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegistrationPage } from '../registration/registration';
-import { CharitylistingPage } from '../charitylisting/charitylisting';
-import { CharityPage } from '../charity/charity';
+import { CharitylistingPage } from '../charitylist/charitylist';
 
 @Component({
   selector: 'page-home',
