@@ -12,7 +12,7 @@ export class CharityPage {
   public description: string;
   public amtRaised: number;
   public goalAmt: number;
-  public website: string;
+  // public website: string;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -20,7 +20,7 @@ export class CharityPage {
     this.description = this.navParams.get("description");
     this.amtRaised = this.navParams.get("amtRaised");
     this.goalAmt = this.navParams.get("goalAmt");
-    this.website = this.navParams.get("website");
+    // this.website = this.navParams.get("website");
   }
 
   ionViewDidLoad() {
