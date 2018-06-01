@@ -12,6 +12,14 @@
 <h3> {{ user.location }} </h3>
 <img src= "{{ user.profilepicture }}">
 <h2> Donation Portfolio </h2>
+<ion-card>
+  <ion-card-header>
+    Doughnut Chart
+  </ion-card-header>
+  <ion-card-content>
+    <canvas #doughnutCanvas></canvas>
+  </ion-card-content>
+</ion-card>
 <h2> {{ user.firstname }}'s Charities</h2>
 
 </ion-content>
