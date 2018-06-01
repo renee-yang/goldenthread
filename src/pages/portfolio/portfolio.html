@@ -1,25 +1,28 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>portfolio</ion-title>
+    <ion-title>Portfolio</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<h1>{{ user.firstname }} {{ user.lastname }}</h1>
-<h3> {{ user.location }} </h3>
-<img src= "{{ user.profilepicture }}">
-<h2> Donation Portfolio </h2>
-<ion-card>
-  <ion-card-header>
-    Doughnut Chart
-  </ion-card-header>
-  <ion-card-content>
-    <canvas #doughnutCanvas></canvas>
-  </ion-card-content>
-</ion-card>
-<h2> {{ user.firstname }}'s Charities</h2>
-
+  <h1>{{ user.firstname }} {{ user.lastname }}</h1>
+  <h3> {{ user.location }} </h3>
+  <img src="{{ user.profilepicture }}">
+  <h2> Donation Portfolio </h2>
+  <ion-card>
+    <ion-card-header>
+      Doughnut Chart
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #doughnutCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+  <h2> {{ user.firstname }}'s Charities</h2>
+  <button ion-item *ngFor="let charity of user.charities" 
+  (click)="charitySelected(charity)">
+    {{charity.name}}
+  </button>
 </ion-content>

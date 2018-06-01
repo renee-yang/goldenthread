@@ -27,12 +27,5 @@ export class HomePage {
   navigateToCharityListing() {
     this.navCtrl.push(CharitylistingPage);
   }
-
-  navigateToPortfolio() {
-    this.navCtrl.push(PortfolioPage);
-  }
-
-  navigateToPayment() {
-    this.navCtrl.push(PaymentPage);
-  }
+  
 }

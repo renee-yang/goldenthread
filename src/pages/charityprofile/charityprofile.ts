@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Charity } from '../../models/charity';
 import { PaymentPage } from '../payment/payment';
+import { PortfolioPage } from '../portfolio/portfolio';
  
 @IonicPage()
 @Component({
@@ -24,4 +25,9 @@ export class CharityPage {
     this.navCtrl.push(PaymentPage);
   }
   
+  addToPortfolio() {
+    this.navCtrl.push(PortfolioPage, {
+        charity: this.charity
+    });
+  }
 }
