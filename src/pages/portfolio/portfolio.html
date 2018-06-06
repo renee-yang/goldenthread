@@ -21,8 +21,7 @@
     </ion-card-content>
   </ion-card>
   <h2> {{ user.firstname }}'s Charities</h2>
-  <button ion-item *ngFor="let charity of user.charities" 
-  (click)="charitySelected(charity)">
+  <button ion-item *ngFor="let charity of user.charities" (click)="charitySelected(charity)">
     {{charity.name}}
   </button>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, App } from 'ionic-angular';
 import { User } from '../../models/user'
 import { HomePage } from '../home/home';
 
@@ -12,7 +12,7 @@ export class ProfilePage {
 
     public user: User;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public navCtrl: NavController, public navParams: NavParams, private app: App) {
         this.user = new User();
     }
 
@@ -22,6 +22,7 @@ export class ProfilePage {
     }
     
     navigateToHome() {
-        this.navCtrl.push(HomePage);
+        this.navCtrl.popToRoot();
+        this.app.getRootNav().setRoot(HomePage);
     }
 }

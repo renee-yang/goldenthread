@@ -29,11 +29,12 @@ export class PortfolioPage {
     this.user.location = "Maryland";
     this.user.charities = new Array<Charity>();
 
+    this.charity = this.navParams.get("charity");
   }
 
   ionViewDidLoad() {
     // this.user.charities = [this.navParams.get("charity")];
-    this.user.charities.unshift(this.navParams.get("charity"));
+    // this.user.charities.unshift(this.navParams.get("charity"));
 
     this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
 

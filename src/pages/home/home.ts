@@ -3,8 +3,6 @@ import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegistrationPage } from '../registration/registration';
 import { CharitylistingPage } from '../charitylist/charitylist';
-import { PortfolioPage } from '../portfolio/portfolio';
-import { PaymentPage } from '../payment/payment';
 
 @Component({
   selector: 'page-home',
